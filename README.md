@@ -36,11 +36,32 @@ $ npm i --save @nestjs/elasticsearch
 
 ## Usage
 
-TBC
+
+1. Import `ElasticsearchModule`:
+
+```typescript
+@Module({
+  imports: [ElasticsearchModule.register({ 
+    host: 'localhost:9200',
+    log: 'trace',
+  })],
+  providers: [...],
+})
+export class SearchModule {}
+```
+
+2. Inject `ElasticsearchService`:
+
+```typescript
+@Injectable()
+export class SearchService {
+  constructor(private readonly elasticsearchService: ElasticsearchService) {}
+}
+```
 
 ## API Spec
 
-TBC
+The `ElasticsearchService` exposes native [elasticsearch](https://www.npmjs.com/package/elasticsearch) methods and wraps them in the Observable, [read more](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html). The `ElasticsearchModule.register()` takes `options` object as an argument, [read more](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/configuration.html).
 
 ## Support
 
