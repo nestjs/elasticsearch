@@ -96,7 +96,8 @@ Above construction will instantiate `ElasticsearchConfigService` inside `Elastic
 class ElasticsearchConfigService implements ElasticsearchOptionsFactory {
   createElasticsearchOptions(): ElasticsearchModuleOptions {
     return {
-      secretOrPrivateKey: 'key',
+      host: 'localhost:9200',
+      log: 'trace',
     };
   }
 }
