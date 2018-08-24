@@ -1,17 +1,70 @@
-import { DynamicModule, Module } from '@nestjs/common';
-import { ConfigOptions } from 'elasticsearch';
+import { DynamicModule, Module, Provider } from '@nestjs/common';
 import { createElasticsearchClient } from './elasticsearch-client.provider';
+import { ELASTICSEARCH_MODULE_OPTIONS } from './elasticsearch.constants';
 import { ElasticsearchService } from './elasticsearch.service';
+import {
+  ElasticsearchModuleAsyncOptions,
+  ElasticsearchModuleOptions,
+  ElasticsearchOptionsFactory
+} from './intefaces/elasticsearch-module-options.interface';
 
 @Module({
   providers: [ElasticsearchService],
   exports: [ElasticsearchService]
 })
 export class ElasticsearchModule {
-  static register(options: ConfigOptions): DynamicModule {
+  static register(options: ElasticsearchModuleOptions): DynamicModule {
     return {
       module: ElasticsearchModule,
-      providers: [createElasticsearchClient(options)]
+      providers: [
+        createElasticsearchClient(),
+        { provide: ELASTICSEARCH_MODULE_OPTIONS, useValue: options }
+      ]
+    };
+  }
+
+  static registerAsync(
+    options: ElasticsearchModuleAsyncOptions
+  ): DynamicModule {
+    return {
+      module: ElasticsearchModule,
+      providers: [
+        createElasticsearchClient(),
+        ...this.createAsyncProviders(options)
+      ]
+    };
+  }
+
+  private static createAsyncProviders(
+    options: ElasticsearchModuleAsyncOptions
+  ): Provider[] {
+    if (options.useExisting || options.useFactory) {
+      return [this.createAsyncOptionsProvider(options)];
+    }
+    return [
+      this.createAsyncOptionsProvider(options),
+      {
+        provide: options.useClass,
+        useClass: options.useClass
+      }
+    ];
+  }
+
+  private static createAsyncOptionsProvider(
+    options: ElasticsearchModuleAsyncOptions
+  ): Provider {
+    if (options.useFactory) {
+      return {
+        provide: ELASTICSEARCH_MODULE_OPTIONS,
+        useFactory: options.useFactory,
+        inject: options.inject || []
+      };
+    }
+    return {
+      provide: ELASTICSEARCH_MODULE_OPTIONS,
+      useFactory: async (optionsFactory: ElasticsearchOptionsFactory) =>
+        await optionsFactory.createElasticsearchOptions(),
+      inject: [options.useExisting || options.useClass]
     };
   }
 }
