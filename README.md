@@ -36,8 +36,7 @@ $ npm i --save @nestjs/elasticsearch
 
 ## Usage
 
-
-1. Import `ElasticsearchModule`:
+Import `ElasticsearchModule`:
 
 ```typescript
 @Module({
@@ -50,7 +49,7 @@ $ npm i --save @nestjs/elasticsearch
 export class SearchModule {}
 ```
 
-2. Inject `ElasticsearchService`:
+Inject `ElasticsearchService`:
 
 ```typescript
 @Injectable()
@@ -58,6 +57,59 @@ export class SearchService {
   constructor(private readonly elasticsearchService: ElasticsearchService) {}
 }
 ```
+
+
+## Async options
+
+Quite often you might want to asynchronously pass your module options instead of passing them beforehand. In such case, use `registerAsync()` method, that provides a couple of various ways to deal with async data.
+
+**1. Use factory**
+```typescript
+ElasticsearchModule.registerAsync({
+  useFactory: () => ({
+    host: 'localhost:9200',
+    log: 'trace',
+  }),
+})
+```
+Obviously, our factory behaves like every other one (might be `async` and is able to inject dependencies through `inject`).
+
+```typescript
+ElasticsearchModule.registerAsync({
+  imports: [ConfigModule],
+  useFactory: async (configService: ConfigService) => ({
+    host: configService.getString('ELASTICSEARCH_HOST'),
+    log: 'trace',
+  }),
+  inject: [ConfigService],
+}),
+```
+
+**2. Use class**
+```typescript
+ElasticsearchModule.registerAsync({
+  useClass: ElasticsearchConfigService,
+})
+```
+Above construction will instantiate `ElasticsearchConfigService` inside `ElasticsearchModule` and will leverage it to create options object.
+```typescript
+class ElasticsearchConfigService implements ElasticsearchOptionsFactory {
+  createElasticsearchOptions(): ElasticsearchModuleOptions {
+    return {
+      secretOrPrivateKey: 'key',
+    };
+  }
+}
+```
+
+**3. Use existing**
+```typescript
+ElasticsearchModule.registerAsync({
+  imports: [ConfigModule],
+  useExisting: ConfigService,
+}),
+```
+It works the same as `useClass` with one critical difference - `ElasticsearchModule` will lookup imported modules to reuse already created `ConfigService`, instead of instantiating it on its own.
 
 ## API Spec
 
