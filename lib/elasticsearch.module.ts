@@ -6,7 +6,7 @@ import {
   ElasticsearchModuleAsyncOptions,
   ElasticsearchModuleOptions,
   ElasticsearchOptionsFactory
-} from './intefaces/elasticsearch-module-options.interface';
+} from './interfaces/elasticsearch-module-options.interface';
 
 @Module({
   providers: [ElasticsearchService],

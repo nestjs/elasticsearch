@@ -1,3 +1,3 @@
 export * from './elasticsearch.module';
 export * from './elasticsearch.service';
-export * from './intefaces';
+export * from './interfaces';

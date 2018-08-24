@@ -1,6 +1,6 @@
 import { Client } from 'elasticsearch';
 import { ELASTICSEARCH_MODULE_OPTIONS } from './elasticsearch.constants';
-import { ElasticsearchModuleOptions } from './intefaces';
+import { ElasticsearchModuleOptions } from './interfaces';
 
 export const ELASTICSEARCH_CLIENT = 'ELASTICSEARCH_CLIENT';
 
