@@ -28,6 +28,7 @@ export class ElasticsearchModule {
   ): DynamicModule {
     return {
       module: ElasticsearchModule,
+      imports: options.imports || [],
       providers: [
         createElasticsearchClient(),
         ...this.createAsyncProviders(options)
