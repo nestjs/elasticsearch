@@ -40,7 +40,7 @@ export class ElasticsearchService {
   }
 
   getSource(params: GetSourceParams): Observable<any> {
-    return bindNodeCallback(this.bindClientContext(this.esClient.clearScroll))(
+    return bindNodeCallback(this.bindClientContext(this.esClient.getSource))(
       params
     );
   }
