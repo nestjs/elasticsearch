@@ -11,11 +11,11 @@
     "publish:npm": "npm publish --access public"
   },
   "peerDependencies": {
-    "@nestjs/common": "^5.0.0",
+    "@nestjs/common": "^6.0.0",
     "rxjs": "^6.2.1"
   },
   "devDependencies": {
-    "@nestjs/common": "^5.0.1",
+    "@nestjs/common": "^6.0.0",
     "@types/node": "^7.0.41",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
