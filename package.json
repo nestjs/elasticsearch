@@ -12,6 +12,8 @@
   },
   "peerDependencies": {
     "@nestjs/common": "^5.0.0",
+    "@types/elasticsearch": "^5.0.24",
+    "elasticsearch": "^15.0.0",
     "rxjs": "^6.2.1"
   },
   "devDependencies": {
@@ -29,9 +31,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "dependencies": {
-    "@types/elasticsearch": "^5.0.24",
-    "elasticsearch": "^15.0.0"
   }
 }
