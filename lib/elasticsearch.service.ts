@@ -24,7 +24,8 @@ import {
   SearchResponse,
   UpdateDocumentByQueryParams,
   UpdateDocumentByQueryResponse,
-  UpdateDocumentParams
+  UpdateDocumentParams,
+  ScrollParams
 } from 'elasticsearch';
 import { bindNodeCallback, Observable } from 'rxjs';
 import { ELASTICSEARCH_CLIENT } from './elasticsearch-client.provider';
@@ -57,6 +58,12 @@ export class ElasticsearchService {
 
   search<T = any>(params: SearchParams): Observable<SearchResponse<T>> {
     return (bindNodeCallback(this.bindClientContext(this.esClient.search))(
+      params
+    ) as any) as Observable<SearchResponse<T>>;
+  }
+
+  scroll<T = any>(params: ScrollParams): Observable<SearchResponse<T>> {
+    return (bindNodeCallback(this.bindClientContext(this.esClient.scroll))(
       params
     ) as any) as Observable<SearchResponse<T>>;
   }
