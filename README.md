@@ -31,7 +31,7 @@ Elasticsearch module for [Nest](https://github.com/nestjs/nest) based on the off
 ## Installation
 
 ```bash
-$ npm i --save @nestjs/elasticsearch
+$ npm i --save @nestjs/elasticsearch elasticsearch @types/elasticsearch
 ```
 
 ## Usage
@@ -40,7 +40,7 @@ Import `ElasticsearchModule`:
 
 ```typescript
 @Module({
-  imports: [ElasticsearchModule.register({ 
+  imports: [ElasticsearchModule.register({
     host: 'localhost:9200',
     log: 'trace',
   })],
