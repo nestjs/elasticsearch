@@ -11,27 +11,25 @@
     "publish:npm": "npm publish --access public"
   },
   "peerDependencies": {
-    "@nestjs/common": "^5.0.0",
+    "@nestjs/common": "^6.0.0",
+    "@types/elasticsearch": "^5.0.24",
+    "elasticsearch": "^15.0.0",
     "rxjs": "^6.2.1"
   },
   "devDependencies": {
-    "@nestjs/common": "^5.0.1",
-    "@types/node": "^7.0.41",
-    "husky": "^0.14.3",
-    "lint-staged": "^7.0.0",
-    "prettier": "^1.11.1",
-    "rxjs": "^6.2.1",
-    "rxjs-compat": "^6.2.1",
-    "typescript": "^2.4.2"
+    "@nestjs/common": "6.0.0",
+    "@types/node": "7.10.5",
+    "husky": "0.14.3",
+    "lint-staged": "7.3.0",
+    "prettier": "1.16.4",
+    "rxjs": "6.4.0",
+    "rxjs-compat": "6.4.0",
+    "typescript": "2.9.2"
   },
   "lint-staged": {
     "*.ts": [
       "prettier --write",
       "git add"
     ]
-  },
-  "dependencies": {
-    "@types/elasticsearch": "^5.0.30",
-    "elasticsearch": "^15.4.1"
   }
 }
