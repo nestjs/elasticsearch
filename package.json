@@ -24,7 +24,7 @@
     "prettier": "1.16.4",
     "rxjs": "6.4.0",
     "rxjs-compat": "6.4.0",
-    "typescript": "2.9.2"
+    "typescript": "3.3.3333"
   },
   "lint-staged": {
     "*.ts": [
