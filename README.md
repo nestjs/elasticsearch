@@ -114,7 +114,7 @@ It works the same as `useClass` with one critical difference - `ElasticsearchMod
 
 ## API Spec
 
-The `ElasticsearchService` exposes native [elasticsearch](https://www.npmjs.com/package/elasticsearch) methods and wraps them in the Observable, [read more](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html). The `ElasticsearchModule.register()` takes `options` object as an argument, [read more](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/configuration.html).
+The `ElasticsearchService` exposes native [elasticsearch](https://www.npmjs.com/package/elasticsearch) methods and wraps them in the Observable, [read more](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html). The `ElasticsearchModule.register()` takes `options` object as an argument, [read more](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/client-configuration.html).
 
 ## Support
 
