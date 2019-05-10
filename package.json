@@ -23,7 +23,7 @@
     "lint-staged": "8.1.6",
     "prettier": "1.17.0",
     "rxjs": "6.5.1",
-    "rxjs-compat": "6.5.1",
+    "rxjs-compat": "6.5.2",
     "typescript": "3.4.5"
   },
   "lint-staged": {
