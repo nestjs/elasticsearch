@@ -6,6 +6,7 @@ package-lock.json
 /.idea
 /.awcache
 /.vscode
+/.history
 
 # misc
 npm-debug.log
