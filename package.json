@@ -17,7 +17,7 @@
     "rxjs": "^6.2.1"
   },
   "devDependencies": {
-    "@nestjs/common": "6.8.5",
+    "@nestjs/common": "6.9.0",
     "@types/node": "7.10.8",
     "husky": "3.0.9",
     "lint-staged": "9.4.2",
