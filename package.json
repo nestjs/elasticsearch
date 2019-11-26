@@ -18,9 +18,9 @@
   },
   "devDependencies": {
     "@nestjs/common": "6.10.2",
-    "@types/elasticsearch": "^5.0.36",
+    "@types/elasticsearch": "5.0.36",
     "@types/node": "7.10.8",
-    "elasticsearch": "^16.5.0",
+    "elasticsearch": "16.5.0",
     "husky": "3.1.0",
     "lint-staged": "9.4.3",
     "prettier": "1.18.2",
