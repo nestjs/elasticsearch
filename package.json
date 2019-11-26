@@ -23,7 +23,7 @@
     "elasticsearch": "^16.5.0",
     "husky": "3.1.0",
     "lint-staged": "9.4.3",
-    "prettier": "1.18.2",
+    "prettier": "1.19.1",
     "rxjs": "6.5.3",
     "rxjs-compat": "6.5.3",
     "typescript": "3.7.2"
