@@ -17,7 +17,7 @@
     "rxjs": "^6.2.1"
   },
   "devDependencies": {
-    "@nestjs/common": "6.10.3",
+    "@nestjs/common": "6.10.4",
     "@types/elasticsearch": "5.0.36",
     "@types/node": "7.10.8",
     "elasticsearch": "16.5.0",
