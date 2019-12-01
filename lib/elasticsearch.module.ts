@@ -1,5 +1,4 @@
 import { DynamicModule, Module, Provider } from '@nestjs/common';
-import { createElasticsearchClient } from './elasticsearch-client.provider';
 import { ELASTICSEARCH_MODULE_OPTIONS } from './elasticsearch.constants';
 import { ElasticsearchService } from './elasticsearch.service';
 import {
@@ -16,10 +15,7 @@ export class ElasticsearchModule {
   static register(options: ElasticsearchModuleOptions): DynamicModule {
     return {
       module: ElasticsearchModule,
-      providers: [
-        createElasticsearchClient(),
-        { provide: ELASTICSEARCH_MODULE_OPTIONS, useValue: options }
-      ]
+      providers: [{ provide: ELASTICSEARCH_MODULE_OPTIONS, useValue: options }]
     };
   }
 
@@ -29,10 +25,7 @@ export class ElasticsearchModule {
     return {
       module: ElasticsearchModule,
       imports: options.imports || [],
-      providers: [
-        createElasticsearchClient(),
-        ...this.createAsyncProviders(options)
-      ]
+      providers: [...this.createAsyncProviders(options)]
     };
   }
 

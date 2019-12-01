@@ -1,6 +1,6 @@
 {
   "name": "@nestjs/elasticsearch",
-  "version": "6.0.1",
+  "version": "7.0.0",
   "description": "Nest - modern, fast, powerful node.js web framework (@elasticsearch)",
   "author": "Kamil Mysliwiec",
   "license": "MIT",
@@ -11,16 +11,14 @@
     "publish:npm": "npm publish --access public"
   },
   "peerDependencies": {
+    "@elastic/elasticsearch": "^7.4.0",
     "@nestjs/common": "^6.0.0",
-    "@types/elasticsearch": "^5.0.24",
-    "elasticsearch": "^15.0.0 || ^16.0.0",
     "rxjs": "^6.2.1"
   },
   "devDependencies": {
+    "@elastic/elasticsearch": "7.4.0",
     "@nestjs/common": "6.10.4",
-    "@types/elasticsearch": "5.0.36",
     "@types/node": "7.10.8",
-    "elasticsearch": "16.5.0",
     "husky": "3.1.0",
     "lint-staged": "9.5.0",
     "prettier": "1.19.1",
