@@ -19,7 +19,7 @@
     "@elastic/elasticsearch": "7.5.0",
     "@nestjs/common": "6.10.14",
     "@types/node": "7.10.8",
-    "husky": "4.2.0",
+    "husky": "4.2.1",
     "lint-staged": "10.0.2",
     "prettier": "1.19.1",
     "rxjs": "6.5.4",
