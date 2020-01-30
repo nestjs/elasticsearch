@@ -20,7 +20,7 @@
     "@nestjs/common": "6.11.4",
     "@types/node": "7.10.8",
     "husky": "4.2.1",
-    "lint-staged": "10.0.4",
+    "lint-staged": "10.0.5",
     "prettier": "1.19.1",
     "rxjs": "6.5.4",
     "rxjs-compat": "6.5.4",
