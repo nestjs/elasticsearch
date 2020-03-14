@@ -1,7 +1,12 @@
 # source
 lib
 index.ts
-package-lock.json
-tslint.json
 tsconfig.json
+
+# misc
+.commitlintrc.json
 .prettierrc
+package-lock.json
+.eslintrc.js
+.release-it.json
+CONTRIBUTING.md

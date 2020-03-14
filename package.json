@@ -5,10 +5,14 @@
   "author": "Kamil Mysliwiec",
   "license": "MIT",
   "scripts": {
+    "lint": "eslint \"lib/**/*.ts\" --fix",
+    "format": "prettier \"lib/**/*.ts\" --write",
     "build": "rm -rf dist && tsc -p tsconfig.json",
     "precommit": "lint-staged",
     "prepublish:npm": "npm run build",
-    "publish:npm": "npm publish --access public"
+    "publish:npm": "npm publish --access public",
+    "prerelease": "npm run build",
+    "release": "release-it"
   },
   "peerDependencies": {
     "@elastic/elasticsearch": "^7.4.0",
@@ -16,20 +20,27 @@
     "rxjs": "^6.2.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "8.3.5",
+    "@commitlint/config-angular": "8.3.4",
     "@elastic/elasticsearch": "7.6.1",
     "@nestjs/common": "7.0.1",
-    "@types/node": "7.10.8",
+    "@types/node": "13.9.1",
+    "@typescript-eslint/eslint-plugin": "2.23.0",
+    "@typescript-eslint/parser": "2.23.0",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-plugin-import": "2.20.1",
     "husky": "4.2.3",
     "lint-staged": "10.0.8",
     "prettier": "1.19.1",
+    "release-it": "13.1.1",
     "rxjs": "6.5.4",
     "rxjs-compat": "6.5.4",
     "typescript": "3.8.3"
   },
   "lint-staged": {
     "*.ts": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   }
 }
