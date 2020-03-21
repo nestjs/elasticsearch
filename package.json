@@ -32,7 +32,7 @@
     "eslint-plugin-import": "2.20.1",
     "husky": "4.2.3",
     "lint-staged": "10.0.8",
-    "prettier": "1.19.1",
+    "prettier": "2.0.0",
     "release-it": "13.1.2",
     "rxjs": "6.5.4",
     "rxjs-compat": "6.5.4",
