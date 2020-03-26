@@ -23,7 +23,7 @@
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-angular": "8.3.4",
     "@elastic/elasticsearch": "7.6.1",
-    "@nestjs/common": "7.0.5",
+    "@nestjs/common": "7.0.6",
     "@types/node": "13.9.4",
     "@typescript-eslint/eslint-plugin": "2.25.0",
     "@typescript-eslint/parser": "2.25.0",
