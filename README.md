@@ -41,7 +41,7 @@ Import `ElasticsearchModule`:
 ```typescript
 @Module({
   imports: [ElasticsearchModule.register({
-    node: 'localhost:9200',
+    node: 'http://localhost:9200',
   })],
   providers: [...],
 })
