@@ -33,7 +33,7 @@
     "husky": "4.2.5",
     "lint-staged": "10.2.2",
     "prettier": "2.0.5",
-    "release-it": "13.6.0",
+    "release-it": "13.6.1",
     "rxjs": "6.5.5",
     "rxjs-compat": "6.5.5",
     "typescript": "3.9.2"
