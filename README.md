@@ -66,7 +66,7 @@ Quite often you might want to asynchronously pass your module options instead of
 ```typescript
 ElasticsearchModule.registerAsync({
   useFactory: () => ({
-    node: 'localhost:9200'
+    node: 'http://localhost:9200'
   })
 });
 ```
@@ -77,7 +77,7 @@ Obviously, our factory behaves like every other one (might be `async` and is abl
 ElasticsearchModule.registerAsync({
   imports: [ConfigModule],
   useFactory: async (configService: ConfigService) => ({
-    node: configService.getString('ELASTICSEARCH_NODE'),
+    node: configService.get('ELASTICSEARCH_NODE'),
   }),
   inject: [ConfigService],
 }),
@@ -97,7 +97,7 @@ Above construction will instantiate `ElasticsearchConfigService` inside `Elastic
 class ElasticsearchConfigService implements ElasticsearchOptionsFactory {
   createElasticsearchOptions(): ElasticsearchModuleOptions {
     return {
-      node: 'localhost:9200'
+      node: 'http://localhost:9200'
     };
   }
 }
