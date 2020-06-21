@@ -20,8 +20,8 @@
     "rxjs": "^6.2.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "8.3.5",
-    "@commitlint/config-angular": "8.3.4",
+    "@commitlint/cli": "9.0.1",
+    "@commitlint/config-angular": "9.0.1",
     "@elastic/elasticsearch": "7.8.0",
     "@nestjs/common": "7.2.0",
     "@types/node": "13.13.5",
