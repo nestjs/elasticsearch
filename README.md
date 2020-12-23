@@ -107,12 +107,64 @@ class ElasticsearchConfigService implements ElasticsearchOptionsFactory {
 
 ```typescript
 ElasticsearchModule.registerAsync({
-  imports: [ConfigModule],
+    imports: [ConfigModule],
   useExisting: ConfigService,
 }),
 ```
 
 It works the same as `useClass` with one critical difference - `ElasticsearchModule` will lookup imported modules to reuse already created `ConfigService`, instead of instantiating it on its own.
+
+## Expose ElasticsearchService
+
+To expose the `ElasticsearchService` to other modules you need to export the `ElasticSearchModule`.
+
+**1. Register and export**
+
+```typescript
+  @Module({
+    imports: [
+      ElasticSearchModule.register({
+        node: 'http://localhost:9200'
+      }),
+    ],
+    exports: [ElasticsearchModule],
+  })
+  export class SearchModule {}
+```
+
+**2. Import**
+
+Now you import the `SearchModule` in the module where you want to use the `ElasticsearchService`
+
+```typescript
+  @Module({
+    imports: [SearchModule],
+    providers: [LoggingService],
+    exports: [LoggingService],
+  })
+  export class LoggingModule {}
+```
+
+**3. Use**
+
+Now we have the `SearchModule` imported we can use the `ElasticsearchService` within the providers.
+
+```typescript
+@Injectable()
+export class LoggingService {
+  constructor(private elasticsearchService: ElasticsearchService) {}
+
+  ...
+
+  private callElasticSearch(level: string, message: any, context?: string) {
+    this.elasticsearchService.index({
+      body: {
+        ....
+      }
+    });
+  }
+}
+```
 
 ## API Spec
 
