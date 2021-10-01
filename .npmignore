@@ -1,0 +1,12 @@
+# source
+lib
+index.ts
+tsconfig.json
+
+# misc
+.commitlintrc.json
+.prettierrc
+package-lock.json
+.eslintrc.js
+.release-it.json
+CONTRIBUTING.md
