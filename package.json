@@ -31,7 +31,7 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "2.25.4",
     "husky": "7.0.4",
-    "lint-staged": "12.1.7",
+    "lint-staged": "12.2.0",
     "prettier": "2.5.1",
     "release-it": "14.12.3",
     "rxjs": "7.5.2",
