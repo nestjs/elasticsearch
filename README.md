@@ -44,6 +44,8 @@ Import `ElasticsearchModule`:
     node: 'http://localhost:9200',
   })],
   providers: [...],
+  // If this SearchModule module will be a shared module, then
+  // you must export ElasticsearchModule
   exports: [ElasticsearchModule]
 })
 export class SearchModule {}
