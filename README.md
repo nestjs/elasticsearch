@@ -44,6 +44,7 @@ Import `ElasticsearchModule`:
     node: 'http://localhost:9200',
   })],
   providers: [...],
+  exports: [ElasticsearchModule]
 })
 export class SearchModule {}
 ```
