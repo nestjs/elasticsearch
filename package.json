@@ -24,7 +24,7 @@
     "@commitlint/cli": "17.6.5",
     "@commitlint/config-angular": "17.6.5",
     "@elastic/elasticsearch": "8.8.1",
-    "@nestjs/common": "10.0.0",
+    "@nestjs/common": "10.0.1",
     "@types/node": "18.16.18",
     "@typescript-eslint/eslint-plugin": "5.59.11",
     "@typescript-eslint/parser": "5.59.11",
