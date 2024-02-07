@@ -23,7 +23,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.8.1",
     "@commitlint/config-angular": "17.8.1",
-    "@elastic/elasticsearch": "8.9.0",
+    "@elastic/elasticsearch": "8.12.1",
     "@nestjs/common": "10.2.3",
     "@types/node": "18.17.12",
     "@typescript-eslint/eslint-plugin": "6.5.0",
