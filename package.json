@@ -21,23 +21,23 @@
     "rxjs": "^7.2.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.5.0",
-    "@commitlint/config-angular": "19.5.0",
-    "@elastic/elasticsearch": "8.15.1",
-    "@nestjs/common": "10.4.5",
-    "@types/node": "20.16.12",
-    "@typescript-eslint/eslint-plugin": "8.10.0",
-    "@typescript-eslint/parser": "8.10.0",
-    "eslint": "9.12.0",
+    "@commitlint/cli": "19.6.1",
+    "@commitlint/config-angular": "19.6.0",
+    "@elastic/elasticsearch": "8.17.0",
+    "@nestjs/common": "10.4.15",
+    "@types/node": "22.10.2",
+    "@typescript-eslint/eslint-plugin": "8.18.0",
+    "@typescript-eslint/parser": "8.18.0",
+    "eslint": "9.17.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.31.0",
-    "husky": "9.1.6",
-    "lint-staged": "15.2.10",
-    "prettier": "3.3.3",
+    "husky": "9.1.7",
+    "lint-staged": "15.2.11",
+    "prettier": "3.4.2",
     "release-it": "17.10.0",
     "rimraf": "6.0.1",
     "rxjs": "7.8.1",
-    "typescript": "5.6.3"
+    "typescript": "5.7.2"
   },
   "lint-staged": {
     "**/*.{ts,json}": []
