@@ -7,6 +7,9 @@ import {
   ElasticsearchOptionsFactory
 } from './interfaces/elasticsearch-module-options.interface';
 
+/**
+ * @publicApi
+ */
 @Module({
   providers: [ElasticsearchService],
   exports: [ElasticsearchService]
