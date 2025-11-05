@@ -35,7 +35,7 @@
     "husky": "9.1.7",
     "lint-staged": "16.2.6",
     "prettier": "3.6.2",
-    "release-it": "19.0.5",
+    "release-it": "19.0.6",
     "rimraf": "6.1.0",
     "rxjs": "7.8.2",
     "typescript": "5.9.3",
