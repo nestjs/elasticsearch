@@ -33,7 +33,7 @@
     "eslint-plugin-prettier": "5.5.4",
     "globals": "16.5.0",
     "husky": "9.1.7",
-    "lint-staged": "16.2.6",
+    "lint-staged": "16.2.7",
     "prettier": "3.6.2",
     "release-it": "19.0.6",
     "rimraf": "6.1.0",
