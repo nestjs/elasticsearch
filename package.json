@@ -34,7 +34,7 @@
     "globals": "16.5.0",
     "husky": "9.1.7",
     "lint-staged": "16.2.7",
-    "prettier": "3.6.2",
+    "prettier": "3.7.1",
     "release-it": "19.0.6",
     "rimraf": "6.1.2",
     "rxjs": "7.8.2",
