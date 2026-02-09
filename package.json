@@ -25,7 +25,7 @@
     "@commitlint/config-angular": "20.4.1",
     "@eslint/eslintrc": "3.3.3",
     "@eslint/js": "9.39.2",
-    "@elastic/elasticsearch": "9.3.0",
+    "@elastic/elasticsearch": "9.3.1",
     "@nestjs/common": "11.1.13",
     "@types/node": "24.10.12",
     "eslint": "9.39.2",
