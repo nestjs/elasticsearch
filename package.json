@@ -26,7 +26,7 @@
     "@eslint/eslintrc": "3.3.3",
     "@eslint/js": "10.0.1",
     "@elastic/elasticsearch": "9.3.1",
-    "@nestjs/common": "11.1.13",
+    "@nestjs/common": "11.1.14",
     "@types/node": "24.10.13",
     "eslint": "10.0.0",
     "eslint-config-prettier": "10.1.8",
