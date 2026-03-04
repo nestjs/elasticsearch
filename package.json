@@ -21,8 +21,8 @@
     "rxjs": "^7.2.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "20.4.2",
-    "@commitlint/config-angular": "20.4.2",
+    "@commitlint/cli": "20.4.3",
+    "@commitlint/config-angular": "20.4.3",
     "@eslint/eslintrc": "3.3.4",
     "@eslint/js": "10.0.1",
     "@elastic/elasticsearch": "9.3.2",
