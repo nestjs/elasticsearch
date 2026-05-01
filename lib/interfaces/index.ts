@@ -1,1 +1,1 @@
-export * from './elasticsearch-module-options.interface';
+export * from './elasticsearch-module-options.interface.js';
