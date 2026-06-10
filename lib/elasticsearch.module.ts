@@ -1,11 +1,11 @@
 import { DynamicModule, Module, Provider } from '@nestjs/common';
-import { ELASTICSEARCH_MODULE_OPTIONS } from './elasticsearch.constants';
-import { ElasticsearchService } from './elasticsearch.service';
+import { ELASTICSEARCH_MODULE_OPTIONS } from './elasticsearch.constants.js';
+import { ElasticsearchService } from './elasticsearch.service.js';
 import {
   ElasticsearchModuleAsyncOptions,
   ElasticsearchModuleOptions,
   ElasticsearchOptionsFactory
-} from './interfaces/elasticsearch-module-options.interface';
+} from './interfaces/elasticsearch-module-options.interface.js';
 
 /**
  * @publicApi
