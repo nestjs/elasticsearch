@@ -27,7 +27,7 @@
     "@commitlint/config-angular": "21.2.0",
     "@elastic/elasticsearch": "9.4.2",
     "@nestjs/common": "11.1.28",
-    "@types/node": "24.13.2",
+    "@types/node": "24.13.3",
     "husky": "9.1.7",
     "lint-staged": "17.0.8",
     "oxlint": "1.73.0",
