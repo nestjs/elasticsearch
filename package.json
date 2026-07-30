@@ -25,7 +25,7 @@
   "devDependencies": {
     "@commitlint/cli": "21.2.1",
     "@commitlint/config-angular": "21.2.0",
-    "@elastic/elasticsearch": "9.4.2",
+    "@elastic/elasticsearch": "9.4.3",
     "@nestjs/common": "11.1.28",
     "@types/node": "24.13.3",
     "husky": "9.1.7",
