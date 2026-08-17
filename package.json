@@ -1,9 +1,21 @@
 {
   "name": "@nestjs/elasticsearch",
   "version": "11.1.0",
+  "type": "module",
   "description": "Nest - modern, fast, powerful node.js web framework (@elasticsearch)",
   "author": "Kamil Mysliwiec",
   "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "scripts": {
     "lint": "oxlint lib",
     "format": "prettier \"lib/**/*.ts\" --write",

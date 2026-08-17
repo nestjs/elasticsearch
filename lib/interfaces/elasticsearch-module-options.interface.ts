@@ -1,10 +1,10 @@
-import { ClientOptions } from '@elastic/elasticsearch';
-import { ModuleMetadata, Type } from '@nestjs/common/interfaces';
+import { Client } from '@elastic/elasticsearch';
+import type { ModuleMetadata, Type } from '@nestjs/common';
 
 /**
  * @publicApi
  */
-export type ElasticsearchModuleOptions = ClientOptions;
+export type ElasticsearchModuleOptions = ConstructorParameters<typeof Client>[0];
 
 /**
  * @publicApi
