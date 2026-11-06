@@ -2,7 +2,14 @@
   "name": "@nestjs/elasticsearch",
   "version": "12.0.1",
   "type": "module",
-  "description": "Nest - modern, fast, powerful node.js web framework (@elasticsearch)",
+  "description": "Elasticsearch for NestJS: an injectable ElasticsearchService around the official @elastic/elasticsearch client.",
+  "keywords": [
+    "nestjs",
+    "nest",
+    "elasticsearch",
+    "search",
+    "full-text-search"
+  ],
   "author": "Kamil Mysliwiec",
   "license": "MIT",
   "main": "./dist/index.js",
